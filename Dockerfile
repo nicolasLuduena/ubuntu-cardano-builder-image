@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libsdl2-ttf-dev \
     liblzma-dev \
     zlib1g-dev \
-    libtool pkg-config && \
+    libtool pkg-config \
     locales locales-all && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
