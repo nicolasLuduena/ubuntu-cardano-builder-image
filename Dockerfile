@@ -74,3 +74,5 @@ RUN git clone --depth 1 --branch ${BLST_VERSION} https://github.com/supranationa
     cp libblst.pc /usr/local/lib/pkgconfig/ && \
     cp bindings/blst_aux.h bindings/blst.h bindings/blst.hpp /usr/local/include/ && \
     cp libblst.a /usr/local/lib
+
+ENV LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
