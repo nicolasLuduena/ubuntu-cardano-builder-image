@@ -24,8 +24,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     liblzma-dev \
     zlib1g-dev \
     libtool pkg-config && \
+    locales locales-all && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
+
+ENV LC_ALL en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
 
 RUN curl --proto '=https' --tlsv1.2 -sSf \
     https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=1 \
